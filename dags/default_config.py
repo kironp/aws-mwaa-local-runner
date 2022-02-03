@@ -63,14 +63,14 @@ from refunds_dag_components import (
     ttl_int_refunds_meta,
     refunds_merge_meta
 )
-from external_data_feeds_history import (
-    external_data_feeds_history_meta,
-    external_data_feeds_history_backfill_meta
-)
-from external_data_feeds_pivot import (
-    external_data_feeds_pivot_meta,
-    external_data_feeds_pivot_backfill_meta
-)
+# from external_data_feeds_history import (
+#     external_data_feeds_history_meta,
+#     external_data_feeds_history_backfill_meta
+# )
+# from external_data_feeds_pivot import (
+#     external_data_feeds_pivot_meta,
+#     external_data_feeds_pivot_backfill_meta
+# )
 
 
 class Daily:
@@ -120,8 +120,8 @@ class Daily:
     tracs_pivot_refunds_sensor_meta = tracs_pivot_refunds_sensor_meta
     ttl_pivot_refunds_sensor_meta = ttl_pivot_refunds_sensor_meta
 
-    external_data_feeds_history_meta = external_data_feeds_history_meta
-    external_data_feeds_pivot_meta = external_data_feeds_pivot_meta
+    # external_data_feeds_history_meta = external_data_feeds_history_meta
+    # external_data_feeds_pivot_meta = external_data_feeds_pivot_meta
 
 
 
@@ -162,8 +162,8 @@ class Backfill:
     ttl_int_refunds_meta = ttl_int_refunds_meta
     refunds_merge_meta = refunds_merge_meta
 
-    external_data_feeds_history_meta = external_data_feeds_history_backfill_meta
-    external_data_feeds_pivot_meta = external_data_feeds_pivot_backfill_meta
+    # external_data_feeds_history_meta = external_data_feeds_history_backfill_meta
+    # external_data_feeds_pivot_meta = external_data_feeds_pivot_backfill_meta
 
 
 
