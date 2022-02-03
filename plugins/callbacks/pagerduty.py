@@ -1,5 +1,5 @@
 from operators.pagerduty_incident_operator import PagerDutyIncidentOperator
-from aws.boto.ssm import get_ssm_value
+from aws_utils.boto_conf.ssm_conf import get_ssm_value
 from os import environ
 
 

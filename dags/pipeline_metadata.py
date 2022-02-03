@@ -1,6 +1,6 @@
 from math import floor
 from copy import deepcopy
-from emr import (
+from emr_config import (
     emr_template,
     # instance_fleet_template,
     emr_master_instance_config,

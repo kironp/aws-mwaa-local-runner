@@ -1,4 +1,4 @@
-from aws.boto.ssm import get_ssm_value
+from aws_utils.boto_conf.ssm_conf import get_ssm_value
 from callbacks.slack_utils import AirflowInstance, message_builder, post_to_slack, \
     BI_WEBHOOK_URL_SSM_NAME, BI_WEBHOOK_CHANNEL
 
