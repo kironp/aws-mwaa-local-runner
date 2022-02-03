@@ -1,6 +1,6 @@
 from airflow.utils.decorators import apply_defaults
 
-from operators.emr_launch_cluster_submit_job_operator import EMRLaunchClusterAndRunSparkJobOperator
+from tl_operators.emr_launch_cluster_submit_job_operator import EMRLaunchClusterAndRunSparkJobOperator
 
 
 class EMRCtxConfLaunchClusterSubmitJobOperator(EMRLaunchClusterAndRunSparkJobOperator):

@@ -167,7 +167,7 @@ class PipelineMetaData:
 
         if self.emr_step_concurrency > 1:
             initial_executor_count = floor(total_executor_count // self.emr_step_concurrency)  # Executors per parallel step
-            spark_update(
+            spark_config.update(
                 {
                     "spark.dynamicAllocation.enabled": "true",
                     "spark.dynamicAllocation.initialExecutors": str(initial_executor_count),
@@ -178,7 +178,7 @@ class PipelineMetaData:
             )
         else:
             executor_count = self.emr_core_instance_count * executors_per_instance + 1  # +1 because driver executor is included in count.
-            spark_update(
+            spark_config.update(
                 {
                     "spark.executor.instances": str(executor_count),
                     "spark.dynamicAllocation.enabled": "false"
@@ -186,5 +186,5 @@ class PipelineMetaData:
             )
 
         # Add and override with explicitly defined spark properties
-        spark_update(self.spark_additional_properties)
+        spark_config.update(self.spark_additional_properties)
         return spark_config

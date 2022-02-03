@@ -6,8 +6,8 @@ from airflow.exceptions import AirflowException
 from airflow.models import DAG, BaseOperator
 from airflow.operators.dummy import DummyOperator
 import logging
-from airflow.providers.amazon.aws.operators.emr import EmrCreateJobFlowOperator
-from airflow.providers.amazon.aws.sensors.emr import EmrJobFlowSensor
+from airflow.providers.amazon.aws.operators.emr_create_job_flow import EmrCreateJobFlowOperator
+from airflow.providers.amazon.aws.sensors.emr_job_flow import EmrJobFlowSensor
 from orderlines_sensors import (
      get_glue_partition_sensors
  )

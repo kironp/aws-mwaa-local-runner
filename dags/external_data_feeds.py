@@ -4,7 +4,7 @@ import logging
 from datetime import datetime
 from airflow.models import DAG
 from airflow.operators.dummy import DummyOperator
-from pipelines import Daily, Backfill
+from default_config import Daily, Backfill
 from orderlines_common import (
     TC_ENV,
     DAG_ID_EXTERNALDATA_SINGLE,

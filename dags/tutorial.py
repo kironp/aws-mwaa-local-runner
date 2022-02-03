@@ -5,10 +5,10 @@ http://airflow.readthedocs.org/en/latest/tutorial.html
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
-from operators.emr_launch_cluster_submit_job_operator import EMRLaunchClusterAndRunSparkJobOperator
-from operators.emr_ctx_conf_launch_cluster_submit_job_operator import EMRCtxConfLaunchClusterSubmitJobOperator
-# from airflow.providers.amazon.aws.operators.emr import EmrCreateJobFlowOperator
-# from airflow.providers.amazon.aws.sensors.emr import EmrJobFlowSensor
+from tl_operators.emr_launch_cluster_submit_job_operator import EMRLaunchClusterAndRunSparkJobOperator
+from tl_operators.emr_ctx_conf_launch_cluster_submit_job_operator import EMRCtxConfLaunchClusterSubmitJobOperator
+# from airflow.providers.amazon.aws.tl_operators.emr import EmrCreateJobFlowOperator
+# from airflow.providers.amazon.aws.tl_sensors.emr import EmrJobFlowSensor
 
 
 default_args = {
@@ -28,7 +28,7 @@ default_args = {
 
 dag = DAG("tutorial", default_args=default_args, schedule_interval=timedelta(1))
 
-# t1, t2 and t3 are examples of tasks created by instantiating operators
+# t1, t2 and t3 are examples of tasks created by instantiating tl_operators
 t1 = BashOperator(task_id="print_date", bash_command="date", dag=dag)
 
 t2 = BashOperator(task_id="sleep", bash_command="sleep 5", retries=3, dag=dag)
