@@ -20,7 +20,7 @@ docker/
     airflow.cfg
     constraints.txt
     requirements.txt
-    webserver_config.py
+    webserver_py
   script/
     bootstrap.sh
     entrypoint.sh

@@ -5,6 +5,10 @@ http://airflow.readthedocs.org/en/latest/tutorial.html
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
+from operators.emr_launch_cluster_submit_job_operator import EMRLaunchClusterAndRunSparkJobOperator
+from operators.emr_ctx_conf_launch_cluster_submit_job_operator import EMRCtxConfLaunchClusterSubmitJobOperator
+# from airflow.providers.amazon.aws.operators.emr import EmrCreateJobFlowOperator
+# from airflow.providers.amazon.aws.sensors.emr import EmrJobFlowSensor
 
 
 default_args = {
